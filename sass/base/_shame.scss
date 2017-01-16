@@ -1,0 +1,204 @@
+//**
+// Shameful Quick Fixes (Tidy Later)
+//**
+/// COLUMNS OF SERVICES
+.main-body{
+  height: 100vh;
+  width: 100vw;
+}
+section.formulario{
+  position: relative;
+  width: 75vw;
+  height: 75vh;
+  margin: auto;
+  top: calc(50vh - (75vh / 2));
+  .card{
+    margin: 16% 5%;
+  }
+  .info-side{
+    background: $white;
+    height:100%;
+    min-height: 75vh;
+    border: 15px solid  $blue;
+
+    div.FirstPanel{
+      h2{
+        font-size: 38px;
+        font-family: $text-font-reg;
+        text-transform: uppercase;
+        color: $blue;
+        margin: 0;
+      }
+      h3{
+        font-size: 24px;
+        font-family: $text-font-reg;
+        text-transform: uppercase;
+        color: $blue;
+        margin: 0;
+      }
+    }
+      h1.header-full{
+        color: $blue;
+        font-size: 54px;
+        font-family: $titles-font;
+        line-height: 0.85em;
+        text-align: left;
+        text-transform: uppercase;
+      }
+      h1.header{
+        position: relative;
+        font-size: 54px;
+        color: $blue;
+        margin: 0 auto;
+        text-align: center;
+        font-family: $titles-font;
+      }
+      div.SecondPanel{
+        display: none;
+      }
+  }
+  .form-side{
+    background: $blue;
+    color:$white;
+    height:100%;
+    min-height: 75vh;
+    .PricePlans{
+      a{
+        text-decoration: none;
+        div.block-plan{
+          height: 100%;
+          width: 95%;
+          margin: 20px 0;
+          padding: 10px;
+          h2{
+            margin: 0;
+            padding-bottom: 5px;
+            text-align: left;
+            font-family: $text-font-reg;
+            font-size: 20px;
+            color: $white;
+            text-transform: uppercase;
+          }
+
+          p{
+            margin: 5px 0;
+            text-align: left;
+            font-family: $text-font-reg-i;
+            font-size: 12px;
+            color: $white;
+          }
+
+          &:hover,
+          &:focus
+          {
+            background-color: darken($blue, 1.8%);
+          }
+        }
+        &.maisInfo div p{
+          position: relative;
+          bottom:0;
+          font-family: $text-font-reg-i;
+          font-size: 10px;
+          color: $white;
+          text-transform: uppercase;
+          text-align: left;
+
+        }
+      }
+      h1.header{
+        position: relative;
+        font-size: 36px;
+        color: $white;
+        margin: 0 auto;
+        text-align: left;
+        font-family: $text-font-bol;
+        text-transform: uppercase;
+      }
+
+    }
+    .personalInfo-form ,.gopInfo-form,.reservasForm{
+      display: none;
+    }
+    .reservasForm{
+      p.small{
+        font-family: $text-font-reg;
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+
+.button {
+	float: left;
+	min-width: 150px;
+	max-width: 250px;
+	display: block;
+	margin: 1em;
+	padding: 1em 2em;
+	border: none;
+	background: none;
+	color: inherit;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+//  ----
+padding: 0;
+overflow: hidden;
+-webkit-transition: background-color 0.3s;
+transition: background-color 0.3s;
+color: #ECEFF1;
+border-color: #ECEFF1;
+
+}
+
+.button:focus {
+	outline: none;
+}
+
+.button > span {
+	vertical-align: middle;
+}
+/* Borders */
+.button--border-thin {
+	border: 1px solid;
+}
+
+.button--border-medium {
+	border: 2px solid;
+}
+
+.button--border-thick {
+	border: 3px solid;
+}
+/* Sizes */
+.button--size-s {
+	font-size: 14px;
+}
+
+.button--size-m {
+	font-size: 16px;
+}
+
+.button--size-l {
+	font-size: 18px;
+}
+
+/* Typography and Roundedness */
+.button--text-thin {
+	font-weight: 300;
+}
+
+.button--text-medium {
+	font-weight: 500;
+}
+
+.button--text-thick {
+	font-weight: 600;
+}
+
+.button--text-upper {
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
