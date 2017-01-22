@@ -104,7 +104,7 @@
 /*---- CONTROL ---*/
 /*---- CONTROL ---*/
 
-.#{ $formbase__prefix }select,select {
+.#{ $formbase__prefix }select, select {
 
 	// Ensure that color is written in hex and escape the color,
 	// to ensure that it's working in url().
@@ -118,7 +118,7 @@ appearance: none;
 	margin: 0 0 $formbase__gutter/2;
 	padding: 0.35rem;
 	width: 100%;
-	background: white;
+	//background: $blue;
 	background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="512" height="512" viewBox="0 0 512 512" xml:space="preserve"><path fill="${ $default }" d="M256,298.3L256,298.3L256,298.3l174.2-167.2c4.3-4.2,11.4-4.1,15.8,0.2l30.6,29.9c4.4,4.3,4.5,11.3,0.2,15.5L264.1,380.9c-2.2,2.2-5.2,3.2-8.1,3c-3,0.1-5.9-0.9-8.1-3L35.2,176.7c-4.3-4.2-4.2-11.2,0.2-15.5L66,131.3c4.4-4.3,11.5-4.4,15.8-0.2L256,298.3z"/></svg>');
 	background-size: 12px;
 	background-repeat: no-repeat;
@@ -153,23 +153,72 @@ appearance: none;
     padding: 0px;
     display: block;
     color: $white;
-    font-size: 18px;
+    font-size: 14px;
     margin-bottom: 10px;
       font-family: $text-font-bol;
-      letter-spacing: .12em
+      letter-spacing: .14em;
+      text-transform:uppercase;
   }
 
-    input,select {
+    input {
     padding:0 0 4px 0;
     border: 0;
     border-bottom: 1px solid $white;
     outline: 0;
     background: transparent;
-    color: $white;
+    color: white;
     font-size: 14px;
     line-height: 22px;
     letter-spacing: .12em;
     transition: all .5s cubic-bezier(.4, .25, .8, .3);
       font-family: $text-font-reg;
   }
+
+      select {
+      padding:0 0 4px 0;
+      border: 0;
+      border-bottom: 1px solid $white;
+      outline: 0;
+      background: transparent;
+      color: white;
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: .12em;
+      transition: all .5s cubic-bezier(.4, .25, .8, .3);
+        font-family: $text-font-reg;
+        width: 75%;
+        max-width: 400px;
+    }
+
+    select option{
+      color:$blue;
+      font-family: $text-font-bol;
+      font-size: 14px;
+      line-height: 22px;
+      border-bottom: 2px solid $blue;
+      padding: 10px;
+      background-color:white;
+      width: 100%;
+    }
+
+
+
+  ::-webkit-input-placeholder,::-moz-placeholder,:-ms-input-placeholder,input:-moz-placeholder
+   {
+    font-family: $text-font-reg;
+    font-size: 12px;
+    letter-spacing: .12em;
+    line-height: 18px;
+    color:#F5f5f5;
+    }
+
+
+   input:invalid + label{
+     color:#F00;
+   }
+
 }
+
+
+
+/*-----------*/

@@ -46,13 +46,13 @@ $line-height: 44px; // Consistent height for buttons, inputs etc.
 $system-font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; // System fonts
 
 
-$titles-font:'Brandon Grotesque Bold';
+$titles-font:'Brandon Grotesque Bold','Helvetica','Arial';
 
-$text-font-reg:'Brandon Text Regular';
-$text-font-reg-i:'Brandon Text Regular Italic';
-$text-font-med-i:'Brandon Text Medium Italic';
-$text-font-bol:'Brandon Text Bold';
-$text-font-bol-i:'Brandon Text Bold Italic';
+$text-font-reg:'Brandon Text Regular','Helvetica','Arial';
+$text-font-reg-i:'Brandon Text Regular Italic','Helvetica','Arial';
+$text-font-med-i:'Brandon Text Medium Italic','Helvetica','Arial';
+$text-font-bol:'Brandon Text Bold','Helvetica','Arial';
+$text-font-bol-i:'Brandon Text Bold Italic','Helvetica','Arial';
 // body font size
 $browser-context: 16;
 
@@ -107,7 +107,7 @@ $container-max-widths: (
 // -------- COLOR SECTION ----------------
 // Better default colors
 
-$blue:  #273996;
+$blue:  #355E94;
 $white: #fff;
 $light-gray: rgba(255,215,124,0.4);
 

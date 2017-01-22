@@ -3,26 +3,27 @@
   background: $blue;
   height: 20px;
   width: 100%;
+  z-index: 9999;
   &.bbottom{
     position: fixed;
-    width: 100vw;
+    width: 100%;
     bottom:0px;
   }
   &.btop{
     position: fixed;
-    width: 100vw;
+    width: 100%;
     top:0px;
   }
   &.bleft{
     position: fixed;
     width: 20px;
-    height:100vh;
+    height:100%;
     left:0px;
   }
   &.bright{
     position: fixed;
     width: 20px;
-    height:100vh;
+    height:100%;
     right:0px;
   }
 }
