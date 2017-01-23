@@ -212,37 +212,37 @@ function NextStep(last, next) {
 
 $(function() {
 // Get the form.
-var form = $('#EncForm');
-
-form.submit(function(event) {
-// Stop the browser from submitting the form.
-event.preventDefault();
-var formData = form.serialize();
-  console.log(formData);
-  	 $.ajax({
-					type: "POST",
-					url: form.attr('action'),
-					data: formData, // serializes the form's elements.
-					async: false,
-					success: function(data,status)
-					{
-							console.log(data);
-							// if(data=="OK"){
-                $('.SP_NEA,.SP_EUA,.SecondPanel,.gopInfo-form').fadeOut(200, function() {
-                  $('.ThirdPanel,.FirstPanel').fadeIn(160);
-                });
-							// }else{
-							// 	alert('Aconteceu um problema com seu pedido, por favor tente outra vez');
-							// }
-					},
-					error: function (XMLHttpRequest, textStatus, errorThrown) {
-        console.log('AJAX error:' + textStatus);
-				alert('Aconteceu um problema com seu pedido, por favor tente outra vez');
-    }
-
-
-				});
-			return false;
-});
+// var form = $('#EncForm');
+//
+// form.submit(function(event) {
+// // Stop the browser from submitting the form.
+// event.preventDefault();
+// var formData = form.serialize();
+//   console.log(formData);
+//   	 $.ajax({
+// 					type: "POST",
+// 					url: form.attr('action'),
+// 					data: formData, // serializes the form's elements.
+// 					async: false,
+// 					success: function(data,status)
+// 					{
+// 							console.log(data);
+// 							// if(data=="OK"){
+//                 $('.SP_NEA,.SP_EUA,.SecondPanel,.gopInfo-form').fadeOut(200, function() {
+//                   $('.ThirdPanel,.FirstPanel').fadeIn(160);
+//                 });
+// 							// }else{
+// 							// 	alert('Aconteceu um problema com seu pedido, por favor tente outra vez');
+// 							// }
+// 					},
+// 					error: function (XMLHttpRequest, textStatus, errorThrown) {
+//         console.log('AJAX error:' + textStatus);
+// 				alert('Aconteceu um problema com seu pedido, por favor tente outra vez');
+//     }
+//
+//
+// 				});
+// 			return false;
+// });
 
 });

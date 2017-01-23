@@ -64,27 +64,27 @@ if (isset($_POST['data'])){
             }
 
             $pdf->SetFont('Arial','B',10);
-            $pdf->Text(14.7,15.2,$data['ID']);
+            $pdf->Text(9.0,15.2,$data['ID']);
             $pdf->SetFont('Arial','B',12);
             // 1ST BLOCK
-            $pdf->Text(9.9,18.1,$nome);
-            $pdf->Text(9.4,18.9,$data['cc']);
-            $pdf->Text(9.4,19.84,$data['nif']);
-            $pdf->Text(10.3,20.70,$data['phone']);
+            $pdf->Text(7.3,18.1,$nome);
+            $pdf->Text(7,18.9,$data['cc']);
+            $pdf->Text(7,19.84,$data['nif']);
+            $pdf->Text(7.9,20.70,$data['phone']);
 
             // 2ND BLOCK
 
-            $pdf->Text(14.3,18.96,$ilha);
-            $pdf->Text(15,19.84,$concelho);
-            $pdf->Text(14.7,20.70,$data['email']);
+            $pdf->Text(12,18.96,$ilha);
+            $pdf->Text(12.8,19.84,$concelho);
+            $pdf->Text(12.4,20.70,$data['email']);
 
             if($data['ref']==1){
-              $pdf->Text(9.8,22.35,$curso);
-              $pdf->Text(11.1,23.19,$uni);
+              $pdf->Text(7.5,22.35,$curso);
+              $pdf->Text(8.8,23.19,$uni);
             }
 
             $pdfnome ='pdfs_inscritos/'.$data['ID'].'_'. $data['name'] .'_'.$data['who'].'.pdf';
-            $pdf->Output('F',$pdfnome,true);
+            $pdf->Output('I',$pdfnome,true);
 
             // Tittle for email template and subject
             $title_mail="ENEAz - A tua inscrição como ".$data['who']." foi submetida.";
@@ -139,7 +139,7 @@ if (isset($_POST['data'])){
                   }
               //_____________________
                   //$mail->add_header("Reply-To: ".$client_email);
-                  $pay_mail = $mail->send();
+                  //$pay_mail = $mail->send();
               /*------------------------*/
 
               // 2º Enviar confirmação do registo e pedido de pagamento à pessoa inscrita
@@ -152,18 +152,18 @@ if (isset($_POST['data'])){
                     $mail   = new Mail($to, $from, $subject, $texto_mail,$html_body);
                     //_____________________
                     //$mail->add_header("Reply-To: ".$client_email);
-                    $confirm_mail= $mail->send();
+                    //$confirm_mail= $mail->send();
                     /*------------------------*/
 
-                    /*Gravar JSON*/
-                    if($pay_mail !=='1'){
-                        $data['pay-mail']='1';
-                    }
-                    if($confirm_mail !=='1'){
-                        $data['confirma-mail']='1';
-                    }
-
-                      $form->prepare_JSON_personalData($data);
+                    // /*Gravar JSON*/
+                    // if($pay_mail !=='1'){
+                    //     $data['pay-mail']='1';
+                    // }
+                    // if($confirm_mail !=='1'){
+                    //     $data['confirma-mail']='1';
+                    // }
+                    //
+                    //   $form->prepare_JSON_personalData($data);
 
                       echo "OK";
 
